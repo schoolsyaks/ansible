@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+
+    - copy:
+         content: "DEMO simple text file 987654321"
+         dest: "/tmp/I_was_here"
