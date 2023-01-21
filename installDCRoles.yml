@@ -1,4 +1,5 @@
 ---
+- hosts: all
 - name: Install Active Directory
     win_feature:
          name=AD-Domain-Services
