@@ -1,8 +1,9 @@
 ---
-tasks:
-- name: Disable Remote Desktop
-  ansible.windows.win_regedit:
-    key: 'HKLM:\System\CurrentControlSet\Control\Terminal Server'
-    value: fDenyTSConnections
-    data: 0
-    datatype: dword
+- hosts: all
+  tasks:
+  - name: Disable Remote Desktop
+    ansible.windows.win_regedit:
+      key: 'HKLM:\System\CurrentControlSet\Control\Terminal Server'
+      value: fDenyTSConnections
+      data: 0
+      datatype: dword
