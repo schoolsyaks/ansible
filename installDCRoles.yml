@@ -1,7 +1,7 @@
 ---
 - hosts: all
 - name: Install Active Directory
-    win_feature:
+    win_feature: >
          name=AD-Domain-Services
          include_management_tools=yes
          include_sub_features=yes
